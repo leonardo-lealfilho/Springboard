@@ -10,7 +10,7 @@ The stock market is where a person or entity can buy and sell publicly held comp
 The dataset used in this project was found in the [Kaggle](https://www.kaggle.com/cnic92/200-financial-indicators-of-us-stocks-20142018) website.  There are 5 different datasets that represents 5 different years worth of data ranging from 2014 to 2018.  The 2 main columns in the datasets are the price variance percentage, which indicates the percentage gain or loss through out that year, and the class column that indicates invest or decline (1 or 0) which is dictated by a positive or negative price variance percentage.
 
 
-## 2. Method
+## 2. Methodology
 
 As I have previously mentioned, the dataset consists mostly of information taken from publicly held companies' annual fanancial statement.  So before beginning the project, I had to take some things into consideration:
 
@@ -22,3 +22,4 @@ As I have previously mentioned, the dataset consists mostly of information taken
 
 ## 3. Data Wrangling
 
+The data used in this project came from 5 different datasets which represented the 5 years spanning from 2014 to 2018.  The first step 
