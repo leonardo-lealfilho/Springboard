@@ -51,7 +51,7 @@ The only "non-feature" columns that will be in the final datasets are:
 * Class - Indicates the recommendation whether to invest (1) or decline (0) the stock.  It is dictated by the price variance as shown in the figure below.
 
 
-![Price Variance / Class Box Plot](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Class%20Box%20Plot.png)[The picture depicts the price variance difference between the decline and invest classes]
+![Price Variance / Class Box Plot](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Class%20Box%20Plot.png)
 
 
 Some of the features were already existing in the main dataset, but most needed to be derived algebraically from the financial information of each company.
@@ -66,6 +66,19 @@ Once I took care of those stocks, I checked the distribution of each feature.  F
 
 ![Price Earning Ratio Kernel Density](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Price%20Earning%20Ratio%20Kernel%20Density.png)
 
-Two of the features that did not present clear differences in the mean or standard deviation (shown in the graphs below) were proven to have different means with a permutation test.
+Two of the features that did not present clear differences in the mean or standard deviation, such as the cash ratio feature (shown in the graph below), were proven to have different means with a permutation test.
 
 ![Cash Ratio Kernel Density](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Cash%20Ratio%20Kernel%20Density%20Plot.png)
+
+The sole feature that I was not able to prove to have difference statistical values between the classes was the debt ratio feature.  That does not mean I will take it from the dataset.  Instead it serves for me to know which features to expect having less of an impact in the creation of the model.
+
+A heatmap was also created to see which features could be considered redundancies.  fortunatelly not many were found and those that were, for the most part, did not have a strong correlation.  The only exceptions are the price earning to growth ratio and the price sales ratio, with a fairly high correlation, and the price to sales ratio and the profit margin, with an almost fully inverse relationship.
+
+![Focused Heatmap](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Focused%20Heat%20Map.png)
+
+The sector feature was the only non numeric feature in the dataset.  To analyze its data I used a count chart that counted how many of each sector had decline class and how many had invest class.  This chart is as follows.
+
+![Sector Count Chart](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Sector%20Count%20per%20Class.png)
+
+
+## Machine Learning
