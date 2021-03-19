@@ -50,11 +50,11 @@ The only "non-feature" columns that will be in the final datasets are:
 * Price Variance Percentage - Indicates the percentage gains or loss of the companies stock throughout that year.
 * Class - Indicates the recommendation whether to invest (1) or decline (0) the stock.  It is dictated by the price variance as shown in the figure below.
 
-<div style="float: right">
-![Price Variance / Class Box Plot](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Class%20Box%20Plot.png)
- </div>
 
-Some of the features were already existing in the main dataset, but most needed to be derived algebraically from the financial information from stock.
+![Price Variance / Class Box Plot](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Class%20Box%20Plot.png){:style="float: left}
+
+
+Some of the features were already existing in the main dataset, but most needed to be derived algebraically from the financial information of each company.
 
 ## 4. Exploratory Data Analysis
 
