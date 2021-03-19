@@ -81,4 +81,13 @@ The sector feature was the only non numeric feature in the dataset.  To analyze 
 ![Sector Count Chart](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Sector%20Count%20per%20Class.png)
 
 
-## Machine Learning
+## 5. Machine Learning
+
+[Machine Learning Report](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Capstone%20Project%20-%20Machine%20Learning.ipynb)
+
+The classifiers I decided to use were the Random Forest Classifier and the Extreme Gradient Boosting Classifier.  I decided to use those because they work somewhat similarly, with the main difference being that the Extreme Boost Classifier combines the results as it goes, "learning" from past mistakes, while the Random Forest Classifier combines the results at the end.  To create the model I have also created a new set of datasets, with the second set having a PowerTransformed version of the numerical features of the original indicators dataset.  The reason to have this transformed dataset was to try and provide the model a dataset that would possibly have a relatively bigger difference between the means of the class in each feature.
+
+The decision between which classifier and which dataset to use was made by measuring the precision score of each model.  The reason why I chose to highlight the precision score is because in order to get a high precision score, the model needs to produce less type I error, which would be predicting less false positives.  The reason I chose to focus on that is because I want to keep the percentage loss to as low as possible.  The best result was the Extreme Gradient Boosting model utilizing the regular data.  The results are as follows.
+
+![Model Scores]()
+
