@@ -21,7 +21,7 @@ As I have previously mentioned, the dataset consists mostly of information taken
 3. The features in the financial information may vary from company to company.  For example, a bigger company will have higher profits and may be able to acquire more debt.  Because of that, I felt more prudent to utilize features that takes some ratios from the financial statements to try and identify strengths and weaknesses between the companies.
 
 
-## 3. Data Wrangling
+## 3. [Data Wrangling](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Capstone%20Project%20-%20Data%20Wrangling.ipynb)
 
 The data used in this project came from 5 different datasets which represented the 5 years spanning from 2014 to 2018.  The first step then was to merge the data together.  The only problem on that step was the "PRICE VAR [%]" column because it originally had the year in which it was taken, for example the 2014 dataset had a "2015 PRICE VAR [%]" column.  To solve this issue I created a new columns in each dataset named "Year" which contains the original year of the dataset (2014 dataset had an "Year" value of 2014 and so on) which helps keep the information of some stocks separated by the year it was originated.  Then I changed the price variance column title to just "PRICE VAR [%]" to keep the information under the same column for all the stocks regardless of the year.  After merging all the files together, I set both the "Year" and the "Stock" columns as the dataset index.
 
@@ -56,9 +56,7 @@ The only "non-feature" columns that will be in the final datasets are:
 
 Some of the features were already existing in the main dataset, but most needed to be derived algebraically from the financial information of each company.
 
-## 4. Exploratory Data Analysis
-
-[EDA Report](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Capstone%20Project%20-%20Exploratory%20Data%20Analysis.ipynb)
+## 4. [Exploratory Data Analysis](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Capstone%20Project%20-%20Exploratory%20Data%20Analysis.ipynb)
 
 The first step I took in this phase of the project was to check the data distribution of each feature.  It was by doing this that I found that I had some features with either a max value of positive infinity or a min value of negative infinity.  For the most part I was able to simply drop the stocks that contained those values in at least one of the features.  The issue though was with the "Cash Flow to Debt Ratio" which had a total of 2,749 stocks that contained infinity values.  Since what was causing the infinity values was the fact that those stocks indicated having a 0 (zero) value for their total debt, I made the decision to eliminate them because a company that has 0 total debt is a company that most likely is not investing in increased operations, which may cause them to be more affected by market volatility.
 
@@ -81,13 +79,29 @@ The sector feature was the only non numeric feature in the dataset.  To analyze 
 ![Sector Count Chart](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Sector%20Count%20per%20Class.png)
 
 
-## 5. Machine Learning
-
-[Machine Learning Report](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Capstone%20Project%20-%20Machine%20Learning.ipynb)
+## 5. [Machine Learning](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Capstone%20Project%20-%20Machine%20Learning.ipynb)
 
 The classifiers I decided to use were the Random Forest Classifier and the Extreme Gradient Boosting Classifier.  I decided to use those because they work somewhat similarly, with the main difference being that the Extreme Boost Classifier combines the results as it goes, "learning" from past mistakes, while the Random Forest Classifier combines the results at the end.  To create the model I have also created a new set of datasets, with the second set having a PowerTransformed version of the numerical features of the original indicators dataset.  The reason to have this transformed dataset was to try and provide the model a dataset that would possibly have a relatively bigger difference between the means of the class in each feature.
 
 The decision between which classifier and which dataset to use was made by measuring the precision score of each model.  The reason why I chose to highlight the precision score is because in order to get a high precision score, the model needs to produce less type I error, which would be predicting less false positives.  The reason I chose to focus on that is because I want to keep the percentage loss to as low as possible.  The best result was the Extreme Gradient Boosting model utilizing the regular data.  The results are as follows.
 
-![Model Scores]()
+![Model Scores](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Model%20Score%20Table.PNG)
 
+Because the winning model had a precision score of a bit over 0.62, which I considered a bit low, I used other methods to try and check its quality.  These methods were to check the concentration of the predicted losses, the percentage of losing stocks per loss range did the model predict, and comparing the average predicted loss with the average predicted gains.  The following graphics demonstrates those three key issues.
+
+![Predicted Loss](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Predicted%20Loss.png)
+![Average Predicted Loss](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Average%20Predicted%20Loss.png)
+![Average Gain and Loss](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Average%20Gain%20and%20Loss.png)
+
+The model was able to concentrate the losses to closer to 0, the percentage of predicted loss gradually decreased as the price variance percentage went further into the negative values, and the mean gains far outweights the mean losses.
+
+## Conclusion and Future Improvements
+
+Though the model did not yield a high precision score, I consider the results to be very good.  The main reason why I believe the results were very good is because the model was able to keep losses low in the testing dataset.  That being said, this would be my future improvements for this project:
+
+* I would shift the invest/decline line from the 0 to 10 or higher.  I believe that since the model was able to keep the losses low and maintain a very high average, it would be able to improve its precision score if it tries to simply predict higher than 0 price variation percentages.
+* On the same note as the above bullet point, I would change the project from a classification predictor to a regression predictor.  With a regression predictor I would then analyse and set a bottom line as to the lowest predicted price variance percentage in which to invest.  I believe this would make it easier to try and predict stock by stock if the intention is not in investing in a collection of stocks all at once.
+
+## Credits
+
+I would like to thank Kaggle user Nicolas Carbone for making the datasets available on Kaggle, personal friend of mine Gene Perry for giving me some pointers on how to proceed with some domain knowledge and lastly but not least my Springboard mentor Branko Kovac for patiently guiding me throughout this project.
