@@ -58,6 +58,14 @@ Some of the features were already existing in the main dataset, but most needed 
 
 ## 4. Exploratory Data Analysis
 
+[EDA Report](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Capstone%20Project%20-%20Exploratory%20Data%20Analysis.ipynb)
+
 The first step I took in this phase of the project was to check the data distribution of each feature.  It was by doing this that I found that I had some features with either a max value of positive infinity or a min value of negative infinity.  For the most part I was able to simply drop the stocks that contained those values in at least one of the features.  The issue though was with the "Cash Flow to Debt Ratio" which had a total of 2,749 stocks that contained infinity values.  Since what was causing the infinity values was the fact that those stocks indicated having a 0 (zero) value for their total debt, I made the decision to eliminate them because a company that has 0 total debt is a company that most likely is not investing in increased operations, which may cause them to be more affected by market volatility.
 
-Once I took care of those stocks, I checked the distribution of each feature.  For the most part the 
+Once I took care of those stocks, I checked the distribution of each feature.  For the most part the features had a clear difference in the standard deviation, as shown in the image below.
+
+![Price Earning Ratio Kernel Density](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Price%20Earning%20Ratio%20Kernel%20Density.png)
+
+Two of the features that did not present clear differences in the mean or standard deviation (shown in the graphs below) were proven to have different means with a permutation test.
+
+![Cash Ratio Kernel Density](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Cash%20Ratio%20Kernel%20Density%20Plot.png)
