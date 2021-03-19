@@ -22,4 +22,4 @@ As I have previously mentioned, the dataset consists mostly of information taken
 
 ## 3. Data Wrangling
 
-The data used in this project came from 5 different datasets which represented the 5 years spanning from 2014 to 2018.  The first step 
+The data used in this project came from 5 different datasets which represented the 5 years spanning from 2014 to 2018.  The first step then was to merge the data together.  The only problem on that step was the "PRICE VAR [%]" column because it originally had the year in which it was taken, for example the 2014 dataset had a "2015 PRICE VAR [%]" column.
