@@ -26,4 +26,4 @@ The data used in this project came from 5 different datasets which represented t
 
 The next steps taken in the continuation of this project were to simply drop useless information such as duplicate columns and stocks with a high amount of missing values.  After that it was time to select which features were going to make it to the final final to be used for the machine learning model.
 
-![Test](Images/"Average Gain and Loss.png")
+![Test](/Images/"Average Gain and Loss.png")
