@@ -50,7 +50,7 @@ The only "non-feature" columns that will be in the final datasets are:
 * Price Variance Percentage - Indicates the percentage gains or loss of the companies stock throughout that year.
 * Class - Indicates the recommendation whether to invest (1) or decline (0) the stock.  It is dictated by the price variance as shown in the figure below.
 
-![Price Variance / Class Box Plot](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Class%20Box%20Plot.png)
+![Price Variance / Class Box Plot](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Class%20Box%20Plot.png) This figure clearly shows how the stocks with a decline class have negative price variances while the invest class has positive price variances.
 
 Some of the features were already existing in the main dataset, but most needed to be derived algebraically from the financial information from stock.
 
@@ -58,4 +58,4 @@ Some of the features were already existing in the main dataset, but most needed 
 
 The first step I took in this phase of the project was to check the data distribution of each feature.  It was by doing this that I found that I had some features with either a max value of positive infinity or a min value of negative infinity.  For the most part I was able to simply drop the stocks that contained those values in at least one of the features.  The issue though was with the "Cash Flow to Debt Ratio" which had a total of 2,749 stocks that contained infinity values.  Since what was causing the infinity values was the fact that those stocks indicated having a 0 (zero) value for their total debt, I made the decision to eliminate them because a company that has 0 total debt is a company that most likely is not investing in increased operations, which may cause them to be more affected by market volatility.
 
-Once I took care of those stocks, I checked the 
+Once I took care of those stocks, I checked the distribution of each feature.  For the most part the 
