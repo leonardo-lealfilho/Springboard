@@ -28,7 +28,7 @@ As I mentioned before, the intent of the project is to build a simple model that
 
 The next part was to check on the data for the first time so a simple plot was done and it looked as follows:
 <p float="center">
-<img src="https://github.com/soccershowman/Springboard/blob/master/Capstone_3/figures/first_plot.jpg" height="600" width="1000"/> 
+<img src="https://github.com/soccershowman/Springboard/blob/master/Capstone_3/figures/first_plot.jpg" height="750" width="1250"/> 
 </p>
 
 The plot illustrates that in some states the data may not have some deficiencies in 2016 and 2017 due to extreme low counts of accidents on parts or all of that priod.  To ensure a good quality model, I decided to only use the data from 2018 and beyond.  After plotting that here is how it looked:
