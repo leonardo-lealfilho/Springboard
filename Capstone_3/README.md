@@ -39,6 +39,6 @@ The plot illustrates that in some states the data may not have some deficiencies
 The next step in the exploratory data analysis was to check for seasonality and trends whithin the dataset.  To do that, I resampled the data by month and plotted accordingly.  Below is a sample of plots that may show some of of those traits.
 
 <p float="left">
-<img src="./figures/seasonality.jpg" height="450" width="550" /> 
-<img src="./figures/trend.jpg" height="450" width="550" />
+<img src="./figures/seasonality.jpg" height="450" width="500" /> 
+<img src="./figures/trend.jpg" height="450" width="500" />
 </p>
