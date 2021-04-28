@@ -58,3 +58,20 @@ And:
 <img src="./figures/percent_change_2020.jpg" height="750" width="500" /> 
 <img src="./figures/2020_percent_change.jpg" height="500" width="500" />
 </p>
+
+
+From those plots I could see that in 2019 the rate of accidents increase and decrease was varied amongst the states.  In 2020 though, I did notice that most states had their amount of accidents decrease, so could this be a trend for 2021 or would that be the reason the percent change of 2021 will mostly increase in each individual state?
+
+## 4. [Machine Learning](https://github.com/soccershowman/Springboard/blob/master/Capstone_3/us_accidents_machine_learning.ipynb)
+
+### The Model
+
+Selecting the model to use was an easy task because the intension was to have a simple forecasting model to analyse and see what could be expected for the first uarter of 2021.  The chosen model then was an AutoRegressive Integrated Moving Average (ARIMA) model.  The AutoRegression part of the model relies on past periods numbers to predict the present period by trying to detect a linear correlation between the current data with earlier data.  The Moving Average works similarly to the AR section, except that instead of relying on the value of the variable, the MA model relies on the value of the residual.  Because they have that one difference, they require different amount of lags to be able to function to the best of their ability.  The i lag will simply find a lag that is best to Integrate both models to become one complete model, if I is zero, the model then become an ARMA model.
+
+For this project I decided to build a model for each state and save them into a single dictionary with the state's name as the key.  I then created different dictionaries for the order, model and results.  The forecast became a dataframe on its own.
+
+### The Result
+
+The result of the forecast is as shown in the picture below:
+
+![]("https://github.com/soccershowman/Springboard/blob/master/Capstone_3/figures/percent_change_2021.jpg")
