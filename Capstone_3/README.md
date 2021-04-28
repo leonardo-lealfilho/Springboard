@@ -68,10 +68,25 @@ From those plots I could see that in 2019 the rate of accidents increase and dec
 
 Selecting the model to use was an easy task because the intension was to have a simple forecasting model to analyse and see what could be expected for the first uarter of 2021.  The chosen model then was an AutoRegressive Integrated Moving Average (ARIMA) model.  The AutoRegression part of the model relies on past periods numbers to predict the present period by trying to detect a linear correlation between the current data with earlier data.  The Moving Average works similarly to the AR section, except that instead of relying on the value of the variable, the MA model relies on the value of the residual.  Because they have that one difference, they require different amount of lags to be able to function to the best of their ability.  The i lag will simply find a lag that is best to Integrate both models to become one complete model, if I is zero, the model then become an ARMA model.
 
-For this project I decided to build a model for each state and save them into a single dictionary with the state's name as the key.  I then created different dictionaries for the order, model and results.  The forecast became a dataframe on its own.
+For this project I decided to build a model for each state and save them into a single dictionary with the state's name as the key.  I then created different dictionaries for the order, model and results.  The forecast became a dataframe on its own.  I ran a testing round by separating the data into train and test data and compared the results by performing the mean absolute error calculation. The MAE was then compared to the original dataset's standard deviation and mean for the same time period of the test dataset. The results provinient from the testing data is as shown:
+
+<p float="center">
+<img src="./figures/MAE_Original_St_Dev.jpg" height="750" width="500"/> 
+<img src="./figures/MAE_Original_Mean.jpg" height="750" width="500"/>
+</p>
+
+The barplots clearly shows that the mean absolute error is for the most part smaller than the standard deviation, in some cases it is actually quite smaller, but in the case it is higher it is just a bit higher.  That means that the average predicted value of the test is within a standard deviation from the average of the original dataset.  That appears to be true when I look at the comparison of the MAE with the original data mean.
 
 ### The Result
 
 The result of the forecast is as shown in the picture below:
 
-![](https://github.com/soccershowman/Springboard/blob/master/Capstone_3/figures/percent_change_2021.jpg)
+<p float="center">
+<img src="https://github.com/soccershowman/Springboard/blob/master/Capstone_3/figures/percent_change_2021.jpg" height="750" width="550"/> 
+</p>
+
+
+<p float="center">
+<img src="" height="750" width="550"/> 
+</p>
+
