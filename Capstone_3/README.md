@@ -28,12 +28,12 @@ As I mentioned before, the intent of the project is to build a simple model that
 
 The next part was to check on the data for the first time so a simple plot was done and it looked as follows:
 <p float="center">
-<img src="https://github.com/soccershowman/Springboard/blob/master/Capstone_3/figures/first_plot.jpg" height="750" width="1250"/> 
+<img src="https://github.com/soccershowman/Springboard/blob/master/Capstone_3/figures/first_plot.jpg" height="750" width="1000"/> 
 </p>
 
 The plot illustrates that in some states the data may not have some deficiencies in 2016 and 2017 due to extreme low counts of accidents on parts or all of that priod.  To ensure a good quality model, I decided to only use the data from 2018 and beyond.  After plotting that here is how it looked:
 <p float="center">
-<img src="https://github.com/soccershowman/Springboard/blob/master/Capstone_3/figures/first_plot_2.jpg" height="600" width="750"/> 
+<img src="https://github.com/soccershowman/Springboard/blob/master/Capstone_3/figures/first_plot_2.jpg" height="600" width="1000"/> 
 </p>
 
 The next step in the exploratory data analysis was to check for seasonality and trends whithin the dataset.  To do that, I resampled the data by month and plotted accordingly.  Below is a sample of plots that may show some of of those traits.
@@ -41,4 +41,20 @@ The next step in the exploratory data analysis was to check for seasonality and 
 <p float="left">
 <img src="./figures/seasonality.jpg" height="750" width="500" /> 
 <img src="./figures/trend.jpg" height="750" width="500" />
+</p>
+
+A slight seasonality can be noticed in some states due to the fact that the minimum value seems to happen in the middle of the year, summer time, for some cases, while the maximum value seems to be towards the end/beginning of the year.  However this seasonality is not very clear so it helps picking a simple type of model in which to fit the dataset.  In the other hand, the trend does seem to be more accentuated in some cases.  The states that demonstrate trends do not necessarily demonstrate the same trend, in other words, some states have a growing number of accidents trend and some have a trend of decreasing number of accidents.
+
+Lastly, in the the last part of the exploratory data analysis I seeked to understand how the numbers from each year's first quarter changed.  In order to do that I got the percent change from the first quarter of each year by comparing it to the previous year, and created bar plots a geospatial plots.  They look as follows:
+
+<p float="left">
+<img src="./figures/percent_change_2019.jpg" height="750" width="500" /> 
+<img src="./figures/2019_percent_change.jpg" height="750" width="500" />
+</p>
+
+And:
+
+<p float="left">
+<img src="./figures/percent_change_2020.jpg" height="750" width="500" /> 
+<img src="./figures/2020_percent_change.jpg" height="750" width="500" />
 </p>
