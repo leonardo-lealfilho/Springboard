@@ -49,12 +49,12 @@ Lastly, in the the last part of the exploratory data analysis I seeked to unders
 
 <p float="left">
 <img src="./figures/percent_change_2019.jpg" height="750" width="500" /> 
-<img src="./figures/2019_percent_change.jpg" height="750" width="500" />
+<img src="./figures/2019_percent_change.jpg" height="500" width="500" />
 </p>
 
 And:
 
 <p float="left">
 <img src="./figures/percent_change_2020.jpg" height="750" width="500" /> 
-<img src="./figures/2020_percent_change.jpg" height="750" width="500" />
+<img src="./figures/2020_percent_change.jpg" height="500" width="500" />
 </p>
