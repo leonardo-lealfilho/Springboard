@@ -3,6 +3,7 @@
 
 ## The Stock Market
 
+![](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Stock%20Market.jpg)
 The stock market is where a person or entity can buy and sell publicly held companies' stocks.  The stock market is very volatile and many factors, such as interest rate, unemploymet, inflation, etc.  Though investing in the stock market has become more accessible with apps such as Robinhood, figuring out a good stock to buy and sell for profit is not an easy task.  With this project I seek to build a machine learning model that will use information found in companies annual financial statement to predict whether the company's stock will be a good one year investment.
 
 ## 1. [Data](https://www.kaggle.com/cnic92/200-financial-indicators-of-us-stocks-20142018)
