@@ -3,7 +3,7 @@
 
 ## The Stock Market
 
-<p float="left">
+<p float="center">
 <img src="Capstone Project/Images/Stock Market.jpg" /> 
  </p>
  
