@@ -33,7 +33,7 @@ The next part was to check on the data for the first time so a simple plot was d
 
 The plot illustrates that in some states the data may not have some deficiencies in 2016 and 2017 due to extreme low counts of accidents on parts or all of that priod.  To ensure a good quality model, I decided to only use the data from 2018 and beyond.  After plotting that here is how it looked:
 <p float="center">
-<img src="https://github.com/soccershowman/Springboard/blob/master/Capstone_3/figures/first_plot_2.jpg" height="600" width="1000"/> 
+<img src="https://github.com/soccershowman/Springboard/blob/master/Capstone_3/figures/first_plot_2.jpg" height="600" width="750"/> 
 </p>
 
 The next step in the exploratory data analysis was to check for seasonality and trends whithin the dataset.  To do that, I resampled the data by month and plotted accordingly.  Below is a sample of plots that may show some of of those traits.
