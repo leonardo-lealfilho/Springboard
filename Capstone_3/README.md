@@ -85,8 +85,9 @@ The result of the forecast is as shown in the picture below:
 <img src="https://github.com/soccershowman/Springboard/blob/master/Capstone_3/figures/percent_change_2021.jpg" height="750" width="550"/> 
 </p>
 
+The Montana data seems to be an extreme outlier.  I suspect that the reason for such a high number may be due to a defected method of data collection that only began collecting valuable data towards the end of the end of 2020.  The plot below seems to back my thought on this:
 
 <p float="center">
-<img src="" height="750" width="550"/> 
+<img src="./figures/montana.jpg" height="500" width="1000"/> 
 </p>
 
