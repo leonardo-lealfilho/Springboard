@@ -82,7 +82,7 @@ The barplots clearly shows that the mean absolute error is for the most part sma
 The result of the forecast is as shown in the picture below:
 
 <p float="center">
-<img src="https://github.com/soccershowman/Springboard/blob/master/Capstone_3/figures/percent_change_2021.jpg" height="750" width="550"/> 
+<img src="./figures/percent_change_2021.jpg" height="750" width="550"/> 
 </p>
 
 The Montana data seems to be an extreme outlier.  I suspect that the reason for such a high number may be due to a defected method of data collection that only began collecting valuable data towards the end of the end of 2020.  The plot below seems to back my thought on this:
@@ -91,3 +91,22 @@ The Montana data seems to be an extreme outlier.  I suspect that the reason for 
 <img src="./figures/montana.jpg" height="500" width="1000"/> 
 </p>
 
+Because of that I decided to analyse the forecast data without Montana's dataset and here is how it looks:
+
+<p float="center">
+<img src="./figures/percent_change_2021_02.jpg" height="750" width="550"/> 
+</p>
+
+The final conclusion is that the forecasted numbers seems to indicate that for the most part the number of accidents will increase in the first quarter of 2021 when compared to 2020.  That could in part be due the fact that 2020 had a decrease in percent change compared to the previous year for most states.
+
+## Conclusion and Future Improvements
+
+The project was complicated to perform because the covid-19 protocals may have influenced the final results.  Since the pandamic was historic, it could not have been predicted by a simple ARIMA model.  The way around that was to use a small test data.  The predicted values do seem to predict certain behaviors, like trend, very well.  Ideally I would like to implement the following changes or studies:
+
+* Acquire more post pandamic data in order to have a more reliable forecasting model.  That would mean to gather data for the next 5 or more years to see how or if the pandemic and its protocal's, such as the ones that forced people to work from home, actually had any affect on traffic issues.
+* A more in depth study of the data would be better.  Due to my limited computing power I was unable to utilize a VARIMA model.  The VARIMA model is a Vectorized ARIMA model.  What that means is that the model would also take into condideration correlations between the states.
+* I would also like to use other factors to see how they affect traffic behavior.  For instance, I understand that rain and wet roads plays a major role in traffic accidents, but how big of a factor is it?  Which areas of the country is more affected by it?
+
+## Credits
+
+I would like to thank Kaggle user Sobhan Moosavi for making the dataset available and extend the thanks to my Springboard mentor Branko Kovac who suggested the project and patiently guided me through the end.  Lastly but not least, the data I used to code to get a geosparial plot can be found in the [census.gov](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html) website.
