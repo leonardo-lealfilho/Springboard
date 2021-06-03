@@ -55,7 +55,7 @@ The only "non-feature" columns that will be in the final datasets are:
 * Class - Indicates the recommendation whether to invest (1) or decline (0) the stock.  It is dictated by the price variance as shown in the figure below.
 
 
-![Price Variance / Class Box Plot](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Class%20Box%20Plot.png)
+![Price Variance / Class Box Plot](https://github.com/soccershowman/Springboard/blob/master/Capstone%20Project/Images/Price%20Variance.png)
 
 
 Some of the features were already existing in the main dataset, but most needed to be derived algebraically from the financial information of each company.
